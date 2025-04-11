@@ -9,7 +9,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
-        # added payload 
+        # payload 
         token['username'] = user.username
         token['role'] = user.role
         
